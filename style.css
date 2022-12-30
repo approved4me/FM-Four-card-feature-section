@@ -1,49 +1,74 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  * {
-    margin: 0;
-  }
-  html, body {
-    height: 100%;
-  }
-  body {
-    line-height: 1.5;
-  }
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  input, button, textarea, select {
-    font: inherit;
-  }
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
 
 /* RESET END*/
 
 :root {
-    --primary-red: hsl(0, 78%, 62%);
-    --primary-cyan: hsl(180, 62%, 55%);
-    --primary-orange: hsl(34, 97%, 64%);
-    --primary-blue: hsl(212, 86%, 64%);
+  --primary-red: hsl(0, 78%, 62%);
+  --primary-cyan: hsl(180, 62%, 55%);
+  --primary-orange: hsl(34, 97%, 64%);
+  --primary-blue: hsl(212, 86%, 64%);
 
-    --neutral-very_dark_blue: hsl(234, 12%, 34%);
-    --neutral-grayish_blue: hsl(229, 6%, 66%);
-    --neutral-very_light_gray: hsl(0, 0%, 98%);
+  --neutral-very_dark_blue: hsl(234, 12%, 34%);
+  --neutral-grayish_blue: hsl(229, 6%, 66%);
+  --neutral-very_light_gray: hsl(0, 0%, 98%);
 }
 
 
 body {
-    background-color: var(--neutral-very_light_gray);
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.938rem;
+  max-width: 90rem;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: var(--neutral-very_light_gray);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.938rem;
 }
 
 main {
-    margin: 2rem auto;
-    max-width: 18rem;
+  margin: 2rem auto;
+  max-width: 18rem;
 }
 
 .top {
@@ -110,5 +135,43 @@ main {
 
 /* FOOTER */
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+/* DESKTOP MODE */
+
+@media only screen and (min-width: 60rem) {
+
+
+  main {
+    max-width: 60rem;
+  }
+
+  .cards {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    align-items: center;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+
+  .box {
+    margin: 0;
+    padding: 1rem;
+
+  }
+
+  .middle {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem 0;
+  }
+}
